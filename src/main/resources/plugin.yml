@@ -1,0 +1,9 @@
+name: SilverGenerators
+version: 1.0
+main: hu.tibor.GeneratorMain
+api-version: 1.19
+author: Tibor
+commands:
+  generator-give:
+    permission: silvergenerators.command.genertor-give
+  generator:

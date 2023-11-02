@@ -56,28 +56,28 @@ public class WoodGenerator implements IGeneratorCreator {
     @Override
     public GeneratorProperty getGeneratorPropery() {
         GeneratorObject[][] generatorObject = new GeneratorObject[getMaxLevel()][20];
-        generatorObject[0][0] =  new GeneratorObject(new ItemStack(Material.OAK_PLANKS), null, 25f);
-        generatorObject[0][1] =  new GeneratorObject(new ItemStack(Material.BIRCH_PLANKS), null, 25f);
-        generatorObject[0][2] =  new GeneratorObject(new ItemStack(Material.JUNGLE_PLANKS), null, 25f);
-        generatorObject[0][3] =  new GeneratorObject(new ItemStack(Material.ACACIA_PLANKS), null, 25f);
+        generatorObject[0][0] =  new GeneratorObject(new ItemStack(Material.OAK_PLANKS), null, 0.70f);
+        generatorObject[0][1] =  new GeneratorObject(new ItemStack(Material.BIRCH_PLANKS), null, 0.70f);
+        generatorObject[0][2] =  new GeneratorObject(new ItemStack(Material.JUNGLE_PLANKS), null, 0.70f);
+        generatorObject[0][3] =  new GeneratorObject(new ItemStack(Material.ACACIA_PLANKS), null, 0.70f);
 
-        generatorObject[1][0] =  new GeneratorObject(new ItemStack(Material.OAK_PLANKS), null, 25f);
-        generatorObject[1][1] =  new GeneratorObject(new ItemStack(Material.BIRCH_PLANKS), null, 25f);
-        generatorObject[1][2] =  new GeneratorObject(new ItemStack(Material.JUNGLE_PLANKS), null, 25f);
-        generatorObject[1][3] =  new GeneratorObject(new ItemStack(Material.ACACIA_PLANKS), null, 25f);
-        generatorObject[1][4] =  new GeneratorObject(new ItemStack(Material.OAK_LOG), null, 25f);
-        generatorObject[1][5] =  new GeneratorObject(new ItemStack(Material.BIRCH_PLANKS), null, 25f);
-        generatorObject[1][6] =  new GeneratorObject(new ItemStack(Material.JUNGLE_PLANKS), null, 25f);
-        generatorObject[1][7] =  new GeneratorObject(new ItemStack(Material.ACACIA_LOG), null, 25f);
+        generatorObject[1][0] =  new GeneratorObject(new ItemStack(Material.OAK_PLANKS), null, 0.25f);
+        generatorObject[1][1] =  new GeneratorObject(new ItemStack(Material.BIRCH_PLANKS), null, 0.25f);
+        generatorObject[1][2] =  new GeneratorObject(new ItemStack(Material.JUNGLE_PLANKS), null, 0.25f);
+        generatorObject[1][3] =  new GeneratorObject(new ItemStack(Material.ACACIA_PLANKS), null, 0.25f);
+        generatorObject[1][4] =  new GeneratorObject(new ItemStack(Material.OAK_LOG), null, 0.25f);
+        generatorObject[1][5] =  new GeneratorObject(new ItemStack(Material.BIRCH_PLANKS), null, 0.25f);
+        generatorObject[1][6] =  new GeneratorObject(new ItemStack(Material.JUNGLE_PLANKS), null, 0.25f);
+        generatorObject[1][7] =  new GeneratorObject(new ItemStack(Material.ACACIA_LOG), null, 0.25f);
 
-        generatorObject[2][0] =  new GeneratorObject(new ItemStack(Material.OAK_PLANKS), null, 25f);
-        generatorObject[2][1] =  new GeneratorObject(new ItemStack(Material.BIRCH_PLANKS), null, 25f);
-        generatorObject[2][2] =  new GeneratorObject(new ItemStack(Material.JUNGLE_PLANKS), null, 25f);
-        generatorObject[2][3] =  new GeneratorObject(new ItemStack(Material.ACACIA_PLANKS), null, 25f);
-        generatorObject[2][5] =  new GeneratorObject(new ItemStack(Material.OAK_PLANKS), null, 25f);
-        generatorObject[2][6] =  new GeneratorObject(new ItemStack(Material.BIRCH_LOG), null, 25f);
-        generatorObject[2][7] =  new GeneratorObject(new ItemStack(Material.SPRUCE_LOG), null, 25f);
-        generatorObject[2][8] =  new GeneratorObject(new ItemStack(Material.ACACIA_PLANKS), null, 25f);
+        generatorObject[2][0] =  new GeneratorObject(new ItemStack(Material.OAK_PLANKS), null, 0.25f);
+        generatorObject[2][1] =  new GeneratorObject(new ItemStack(Material.BIRCH_PLANKS), null, 0.25f);
+        generatorObject[2][2] =  new GeneratorObject(new ItemStack(Material.JUNGLE_PLANKS), null, 0.25f);
+        generatorObject[2][3] =  new GeneratorObject(new ItemStack(Material.ACACIA_PLANKS), null, 0.25f);
+        generatorObject[2][5] =  new GeneratorObject(new ItemStack(Material.OAK_PLANKS), null, 0.25f);
+        generatorObject[2][6] =  new GeneratorObject(new ItemStack(Material.BIRCH_LOG), null, 0.25f);
+        generatorObject[2][7] =  new GeneratorObject(new ItemStack(Material.SPRUCE_LOG), null, 0.25f);
+        generatorObject[2][8] =  new GeneratorObject(new ItemStack(Material.ACACIA_PLANKS), null, 0.25f);
 
 
 

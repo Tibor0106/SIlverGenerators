@@ -21,7 +21,6 @@ public class GeneratorLoader {
         woodGenerator = new WoodGenerator();
         woodGenerator.getGenerator();
         GeneratorMain.generators.add(woodGenerator.getGenerator());
-
     }
     public static Generator getOreGenerator() {
         Generator gen = oreGenerator.getGenerator();

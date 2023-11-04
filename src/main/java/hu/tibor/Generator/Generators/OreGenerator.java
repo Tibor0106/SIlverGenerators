@@ -5,6 +5,7 @@ import hu.tibor.Generator.I.IGeneratorCreator;
 import hu.tibor.Generator.Objects.GeneratorObject;
 import hu.tibor.Generator.Objects.GeneratorProperty;
 import hu.tibor.Generator.Objects.GeneratorType;
+import hu.tibor.Generator.Objects.LoadedGenerators;
 import hu.tibor.Utils;
 import me.filoghost.holographicdisplays.api.HolographicDisplaysAPI;
 import me.filoghost.holographicdisplays.api.hologram.Hologram;
@@ -20,7 +21,7 @@ public class OreGenerator implements IGeneratorCreator {
     @Override
     public Generator getGenerator() {
         generator = new Generator(getGeneratorItem(), getId(), getName(), getMaxLevel(),
-                upgradePrice(), getGeneratorPropery(), getBlockOfLevel());
+                upgradePrice(), getGeneratorPropery(), getBlockOfLevel(), this);
         return generator;
     }
     @Override
@@ -117,4 +118,10 @@ public class OreGenerator implements IGeneratorCreator {
         time[4] = 4.5f;
         return time;
     }
+
+    @Override
+    public void Do(LoadedGenerators generator) {
+
+    }
+
 }

@@ -5,6 +5,7 @@ import hu.tibor.Generator.I.IGeneratorCreator;
 import hu.tibor.Generator.Objects.GeneratorObject;
 import hu.tibor.Generator.Objects.GeneratorProperty;
 import hu.tibor.Generator.Objects.GeneratorType;
+import hu.tibor.Generator.Objects.LoadedGenerators;
 import hu.tibor.Utils;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
@@ -16,7 +17,7 @@ public class WoodGenerator implements IGeneratorCreator {
     @Override
     public Generator getGenerator() {
         generator = new Generator(getGeneratorItem(), getId(), getName(), getMaxLevel(),
-                upgradePrice(), getGeneratorPropery(), getBlockOfLevel());
+                upgradePrice(), getGeneratorPropery(), getBlockOfLevel(), this);
         return generator;
     }
     @Override
@@ -104,5 +105,10 @@ public class WoodGenerator implements IGeneratorCreator {
         time[1] = 16.5f;
         time[2] = 15.5f;
         return time;
+    }
+
+    @Override
+    public void Do(LoadedGenerators generator) {
+
     }
 }

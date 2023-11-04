@@ -33,8 +33,6 @@ public class LoadedGenerators {
         this.timer = 0;
         String genKey = Utils.createGeneratorKey();
         this.key = genKey;
-        this.generator.key = genKey;
-
 
     }
     private Hologram createHologram(Location location){

@@ -1,6 +1,8 @@
 package hu.tibor.Generator;
 
+
 import hu.tibor.Generator.Evenets.GeneratorPlace;
+import hu.tibor.Generator.I.IGeneratorCreator;
 import hu.tibor.Generator.Objects.GeneratorObject;
 import hu.tibor.Generator.Objects.GeneratorProperty;
 import hu.tibor.Generator.Objects.LoadedGenerators;
@@ -26,18 +28,19 @@ public class Generator {
     public float[] upgradePrice;
     public GeneratorProperty property;
     public Material[] blockOfLevel;
-    public String key;
+
+    public IGeneratorCreator creator;
 
 
     public Generator(ItemStack GeneratorItem, String id, String name, int maxLevel,
-                     float[] upgradePrice, GeneratorProperty generatorProperty, Material[] blockOfLevel){
+                     float[] upgradePrice, GeneratorProperty generatorProperty, Material[] blockOfLevel, IGeneratorCreator creator){
         this.generatorItem = GeneratorItem;
         this.id = id;
         this.name = name;
         this.maxLevel = maxLevel;
         this.upgradePrice = upgradePrice;
         this.property = generatorProperty;
-        this.blockOfLevel = blockOfLevel;
+        this.creator = creator;
 
     }
 

@@ -65,7 +65,7 @@ public class MobGenerator implements IGeneratorCreator {
             generatorObject[0][2] =  new GeneratorObject(new ItemStack(Material.COBBLESTONE), null, 0.90f);
 
 
-            GeneratorProperty generatorProperty = new GeneratorProperty(GeneratorType.ITEM, generatorObject, BrakeTime());
+            GeneratorProperty generatorProperty = new GeneratorProperty(GeneratorType.MOB, generatorObject, BrakeTime());
             return generatorProperty;
         }
 

@@ -5,6 +5,7 @@ import hu.tibor.Generator.Evenets.GeneratorPlace;
 import hu.tibor.Generator.I.IGeneratorCreator;
 import hu.tibor.Generator.Objects.GeneratorObject;
 import hu.tibor.Generator.Objects.GeneratorProperty;
+import hu.tibor.Generator.Objects.GeneratorType;
 import hu.tibor.Generator.Objects.LoadedGenerators;
 import hu.tibor.GeneratorMain;
 import me.filoghost.holographicdisplays.api.hologram.Hologram;
@@ -40,16 +41,16 @@ public class Generator {
         this.maxLevel = maxLevel;
         this.upgradePrice = upgradePrice;
         this.property = generatorProperty;
+        this.blockOfLevel = blockOfLevel;
         this.creator = creator;
 
     }
-
 
     public static void TimerStart(){
         Bukkit.getScheduler().runTaskTimer(hu.tibor.GeneratorMain.getPlugin(hu.tibor.GeneratorMain.class), new Runnable() {
             @Override
             public void run() {
-                try{
+
                     for (LoadedGenerators i : GeneratorMain.Loadedgenerators) {
                         Location loc = new Location(i.location.getWorld(), i.location.getX(), i.location.getY(), i.location.getZ());
                         if(loc.add(0, -3,0).getBlock().getType() == Material.AIR){
@@ -60,14 +61,14 @@ public class Generator {
                         TextHologramLine item = (TextHologramLine) i.hologram.getLines().get(3);
                         if(i.timer == 0){
                             item.setText("§4§lKiüthető");
+                            i.generator.creator.Do(i);
                         } else {
                             i.timer = i.timer-0.5f;
                             item.setText("§4§l"+i.timer);
 
                         }
                     }
-                }catch (Exception err){
-                }
+
             }
         }, 10, 10);
     }
@@ -89,9 +90,12 @@ public class Generator {
         }
 
         if (selectedObject != null) {
-            braker.getLocation().getWorld().dropItem(braker.getLocation().add(0, 1, 0), selectedObject.item);
-        } else {
-            Bukkit.getLogger().severe("nincs");
+            if(generator.generator.property.type == GeneratorType.ITEM){
+                braker.getLocation().getWorld().dropItem(braker.getLocation().add(0, 1, 0), selectedObject.item);
+            } else if(generator.generator.property.type == GeneratorType.MOB){
+                generator.location.getWorld().spawnEntity(generator.location, selectedObject.entity);
+            }
+
         }
 
 
